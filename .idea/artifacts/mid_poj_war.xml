@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mid_poj:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mid_poj</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mid_poj-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mid_poj:war exploded" />
+    </root>
+  </artifact>
+</component>
