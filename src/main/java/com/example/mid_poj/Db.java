@@ -10,7 +10,7 @@ public class Db extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         PrintWriter wr = response.getWriter();
-
+        wr.println("HAHA");
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
@@ -18,16 +18,16 @@ public class Db extends HttpServlet {
         }
         try {
             Connection conn = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:50443/udb",
-                    "admin",
+                    "jdbc:postgresql://localhost:5432/udb",
+                    "postgres",
                     "123");
             Statement sta = conn.createStatement();
-            ResultSet rs = sta.executeQuery("SELECT title from users");
+            ResultSet rs = sta.executeQuery("SELECT login from users");
 
             while(rs.next()){
                 wr.println(rs.getString("login"));
-                sta.close();
             }
+            sta.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -5,10 +5,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
-<a href="db">db</a>
+<%@ page import="com.example.mid_poj.ChechAuthfilter" %>
+
 </body>
 </html>
